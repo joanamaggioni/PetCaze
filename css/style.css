@@ -1,0 +1,351 @@
+/* corpo */
+
+body {
+	font-family: Nunito, sans-serif;
+	color: #1c1c1c;
+}
+
+h1, h2, h3 {
+	font-family: Asap, sans-serif;
+	color: #000000;	
+}
+
+.botao {
+		color: #FFFFFF;
+		text-decoration: none;
+		padding: 10px 30px;
+		background-color: #191970;
+		font-size: .9em;
+		border-radius: 3px;
+}
+
+.textoroxo {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	margin-left: 50px;
+	color: #70139b;
+	font-size: x-large;
+	font-weight: normal;
+
+}
+
+/* Navegação */
+
+nav {
+		display: flex;
+		align-items: right;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+		background-color: #70139b;
+		height: 24vh;
+		margin-bottom: 50px;
+		letter-spacing: 3px;
+}
+
+.navbar-nav{
+	/* margin-left: auto; */
+	align-items: right;
+
+}
+.nav-list {
+	list-style: none;
+	display: flex;
+}
+
+.nav-list li {
+	letter-spacing: 3px;
+	margin-left: 32px;
+}
+
+/* nome do pet */
+nav > a {
+
+			text-decoration: none;
+			color: #FFFFFF;
+			font-size: 35px;
+			font-family: Yellowtail, serif;
+
+}
+
+nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style: none;
+}
+
+nav ul li a {
+
+			padding: 10px 0;
+			width: 100%;
+			text-decoration: none;
+			color: #FFFFFF;
+}
+
+.mobile-menu {
+	display: none;
+
+}
+
+.mobile-menu div{
+width: 32px;
+height: 2px;
+background: #fff;
+margin: 8px;
+}
+
+@media (max-width: 999px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.nav-list {
+		position: absolute;
+		top: 8vh;
+		right: 0;
+		width: 50vw;
+		height: 92vh;
+		background: black;		
+		flex-direction: column;
+		align-items: center; 
+		justify-content: space-around;
+		transform: translateX(100%); 
+	}
+
+	.nav-list li {
+		margin-left: 0;
+		opacity: 0;
+	}
+
+	.mobile-menu{
+		display: block;
+	}
+}
+
+.nav-list.active {
+	transform: translateX(0);
+}
+
+/*Cabeçalho*/
+
+header {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* background-image: url("../petshop/produtos-mais-vendidos-em-pet-shop-750x410.png"); */
+		background-size: cover;
+		color: #FFFFFF;
+		text-align: center;
+		padding: 20px;
+
+}
+
+header h1{
+
+	color: #FFFFFF;
+}
+
+header p{
+	margin-bottom: 2em;
+}
+
+#sobre {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 10px 10px 20px 20px;
+		background-color: 191970;
+		color: #FFFFFF;
+}
+
+#sobre h2 {
+	color: #FFFFFF;
+}
+
+#sobre p {
+	margin-bottom: 2.5em;
+	max-width: 1000px;
+
+}
+
+#sobre .botao {
+
+	background-color: #f1f1f1;
+	color: 1c1c1c;
+
+}
+
+/*Fotos*/
+
+#fotos {
+	display: : flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#fotos h2 {
+			margin-bottom: 20px;
+}
+
+#fotos img {
+
+		width: 100%;
+}
+
+/*Contato*/
+
+.contato {
+	margin: 40px;
+	color: #70139b;
+	font-size: x-large;
+	font-weight: normal;
+}
+
+#contato h2 {
+
+	color: #000000;
+}
+
+/*rodapé*/
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: #70139b;
+	color: #FFFFFF;
+	width: 100%;
+	height: 150px;
+	position: relative;
+	bottom: 0;
+	left: 0;
+}
+
+footer a { 
+			text-decoration: : none;
+			color: #00FFFF;
+
+}
+
+@media screen and (min-width: 768px) {
+
+	/*nav*/
+
+	nav {
+			flex-direction: row;  
+			justify-content: space-around;
+	}
+
+	nav ul {
+
+			flex-direction: row;
+			width: 70%
+
+	}
+
+	/*Cabeçalho*/
+
+	header {
+			height: 600px;
+			height: 60vh;
+			justify-content: center;
+	}
+
+	/*Sobre*/
+	#sobre {
+		height: 250px;
+		height: 30vh;
+		justify-content: center;
+		min-height: 250px 
+	}
+
+	/*Serviços*/
+	#serviços {
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			max-width: 1000px;
+			margin: 0 auto;
+	}
+
+	#serviços h2 {
+				text-align: center;
+				width: 100%;
+	}
+	#serviços div {
+				flex-grow: 1;
+				flex-basis: 150px;
+				padding: 0 10px;
+	}
+
+	/*fotos*/
+
+	#fotos {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	#fotos h2 {
+		width: 100%;
+		text-align: center;
+	}
+	#fotos img {
+
+			width: 33.3333333%;	
+	}
+
+	/*Contato*/
+	#contato {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			max-width: 500px;
+			margin: 0 auto;
+	}
+	#contato h2{
+		width 100%;
+
+	}
+
+	#contato p {
+		width 100%;
+
+	}
+
+	.petcaze {
+	text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex;
+    align-items: right;
+  }
+
+  .carousel-inner > .carousel-item > img {
+	width: 700px;
+	text-align: center;
+	height: 400px;
+	align-items: center; 
+	margin: auto; 
+  }
+
+  .card {
+		margin-bottom: 40px;
+		margin-right: 60px;
+		align-items: right;
+		/* float: none;  */
+    	max-width:200px;
+    	max-height:280px;
+		display: flex;
+  		justify-content: center;
+  }
+}
+
+.bmi {      
+    margin-left: 18%;      
+    margin-right: 18%;
+    width: auto;
+}
